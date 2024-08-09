@@ -9,13 +9,13 @@ const AdminRegister = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phone,setPhone]=useState("");
-//////    
+
 
     const handleRegister = async (e) => {
         e.preventDefault(); // Prevent default form submission
       
         try {
-          const response = await axios.post("https://student-managment-system-zja5.onrender.com/api/v1.1/admin/register",{firstName,lastName, email, password,phone }); 
+          const response = await axios.post("https://student-management-project.onrender.com/api/v1.1/admin/register",{firstName,lastName, email, password,phone }); 
           if (response.status === 200) {
             // Registration successful, redirect to admin login
             window.location.href = '/admin-signIn';
